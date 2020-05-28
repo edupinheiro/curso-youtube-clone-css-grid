@@ -4,13 +4,44 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+}
 header{
-    background-color: #2196f3;
+    padding: 1rem;
+    background-color: white;
+    border-bottom: 2px solid #f2f2f2;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.search input[type='search']{
+    width: 400px;
+    padding: 0.5rem;
+    border-radius: 2px;    
+    border: 1px solid #ccc;
+}
+
+.button{
+    padding: 0.25rem 1.5rem;
+    border-radius: 2px;
+    border: 1px solid #2c5fd5;
+    color: #2c5fd5;
+    text-decoration: none;
+    font-weight: bold;
+
 }
 
 main{
-
-    max-width: 1200px;
     margin: auto;
     background-color: #ddd;
     display: grid;
@@ -20,10 +51,6 @@ main{
         'actions       actions'
         'channel       subscribe'
         'up-next       up-next';
-}
-
-header, section{
-    padding: 5rem;
 }
 
 .video-player{
@@ -62,21 +89,23 @@ header, section{
 }
 
 @media screen and (max-width: 700px){
-    .ads{
+    .search, .ads{
         display: none;
     }
 }
 
 @media screen and (min-width: 700px){
+    header{
+        grid-template-columns: auto auto auto;
+    }
+
     main{
+        max-width: 1200px;
+
         grid-template-areas:
         'video-player  video-player ads'
         'video-player  video-player up-next'
         'video-info    actions      up-next'
         'channel       subscribe    up-next';              
-    }
-
-    .ads{
-        padding: 1rem;
     }
 }
