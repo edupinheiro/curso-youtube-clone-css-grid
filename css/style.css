@@ -74,14 +74,53 @@ main{
 }
 
 .video-info{
-    background-color: #999;
     grid-area: video-info;
+    padding: 1rem;
+}
+
+.video-info h1{
+    font-size: 18px;
+    font-weight: normal;
+
+}
+
+.video-info .views{
+    color: #606060;
 }
 
 .actions{
-    background-color: #744;
     grid-area: actions;
+
+    border-bottom: 1px solid #ddd;
+    padding: 0 1rem 1.2rem 1rem;
+    color: #636363;
+
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-evenly;
+    align-items: end;
+    column-gap: 1rem;
 }
+
+.action{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.action svg{
+    width: 24px;
+    height: 24px;
+    fill:currentColor;
+}
+
+.action:last-child {
+    grid-template-columns: auto;
+}
+
 
 .channel{
     background-color: #555;
