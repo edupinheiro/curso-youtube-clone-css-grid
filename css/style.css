@@ -39,7 +39,6 @@ header{
     color: #2c5fd5;
     text-decoration: none;
     font-weight: bold;
-
 }
 
 main{
@@ -148,13 +147,24 @@ main{
 }
 
 .subscribe{
-    background-color: #888;
     grid-area: subscribe;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 1rem 3rem 1rem;
+    text-align: right;
+}
+
+.subscribe .button{
+    border: none;   
+    padding: 10px 16px;
+    background-color: #c00;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .ads{
-    background-color: #def;
     grid-area: ads;
+    margin: 1rem;
+    border-bottom: 1px solid #ddd;
 }
 
 .up-next{
