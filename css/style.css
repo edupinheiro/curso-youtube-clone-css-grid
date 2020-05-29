@@ -123,8 +123,28 @@ main{
 
 
 .channel{
-    background-color: #555;
     grid-area: channel;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1rem;
+    justify-content: start;
+    padding-left: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.channel img{
+    width: 48px;
+    border-radius: 50%;
+}
+
+.channel .subscribed{
+    color: #777;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.channel .channel-description{
+    font-size: 0.8rem;
 }
 
 .subscribe{
